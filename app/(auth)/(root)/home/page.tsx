@@ -34,7 +34,7 @@ export default function Home() {
           <Link href="/" className="font-medium hover:text-gray-300 transition">Home</Link>
           <Link href="/about" className="font-medium hover:text-gray-300 transition">About us</Link>
           <Link href="/services" className="font-medium hover:text-gray-300 transition">Services</Link>
-          <Link href="/contact us">
+          <Link href="/contact">
             <Button variant="outline" className="font-medium bg-white/20 text-white border-white hover:bg-white/20 rounded-full">
               Contact us
             </Button>
@@ -403,7 +403,7 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact us" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact us
                 </Link>
               </li>
