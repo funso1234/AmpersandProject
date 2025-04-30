@@ -112,7 +112,7 @@ export default function ContactUsPage() {
       </div>
     </section>
 
-    <section className="w-full bg-white">
+    <section className="w-full bg-[#F4F4F4]">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div className="relative w-full h-[500px] lg:h-[600px] rounded">
           <Image

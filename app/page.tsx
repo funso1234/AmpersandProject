@@ -1,63 +1,56 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+"use client"
+
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { ArrowRight, Facebook, Instagram, Linkedin } from "lucide-react";
 
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
     <main className="min-h-screen relative md:px-20 bg-white text-gray-800">
-    {/* Navigation */}
-    <nav className="absolute top-0 left-0 right-0 z-10 p-4">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
-        <div className="flex items-center gap-2">
-          <Image
-            src="/Group.png"
-            alt="logo"
-            width={32}
-            height={32}
-          />
-          
-        </div>
-        <div>
-        <h1 className="text-white font-bold text-xl">Ampersand Hi-Tech</h1>
-          <h1 className="text-xs text-gray-400 font-bold">Hi~Tech Technologies</h1>
-        </div>
-        </div>
-        
-      
+      {/* Background image and overlay */}
+      <div className="absolute inset-0 z-0 h-[710px]">
+        <Image
+          src="/home.png"
+          width={1544}
+          height={700}
+          alt="Network background"
+          className="w-full h-full object-cover"
+          sizes="100vw"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
 
+      {/* Navbar */}
+      <div className="relative z-10 container mx-auto flex items-center justify-between px-4 py-6">
+        <div className="flex items-center gap-3">
+          <Image src="/Group.png" alt="logo" width={32} height={32} />
+          <div className="flex flex-col leading-tight">
+            <span className="text-white font-bold text-lg">Ampersand Hi-Tech</span>
+            <span className="text-xs text-gray-400 font-semibold">Hi~Tech Technologies</span>
+          </div>
+        </div>
         <div className="hidden md:flex items-center gap-6 text-white">
           <Link href="/" className="font-medium hover:text-gray-300 transition">Home</Link>
           <Link href="/about" className="font-medium hover:text-gray-300 transition">About us</Link>
           <Link href="/services" className="font-medium hover:text-gray-300 transition">Services</Link>
-          <Link href="/contact us">
-            <Button variant="outline" className="font-medium bg-white/20 text-white border-white hover:bg-white/20 rounded-full">
+          <Link href="/contact">
+            <Button
+              variant="outline"
+              className="font-medium bg-white/20 text-white border-white hover:bg-white/30 rounded-full"
+            >
               Contact us
             </Button>
           </Link>
         </div>
-        
       </div>
-    </nav>
+      
 
-    {/* Hero Section */}
-    <section className="relative h-screen">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/home.png"
-          alt="Network equipment with blue cables"
-          fill
-          className="object-cover brightness-75"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto h-full flex flex-col justify-center px-4">
+      <div className="relative z-10 container mx-auto h-full flex flex-col justify-center px-4 mt-50">
         <div className="max-w-lg">
           <h1 className="text-5xl font-bold text-white mb-4">Connecting Communities</h1>
           <p className="text-white/80 mb-8">
@@ -73,10 +66,10 @@ export default function Home() {
           </Link>
         </div>
       </div>
-    </section>
+    
 
     {/* Why Choose Section */}
-    <section className="py-16 px-4 bg-white">
+    <section className="py-16 px-4 bg-white mt-40">
       
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
       <div className="container mx-auto">
@@ -86,7 +79,7 @@ export default function Home() {
           to a more sustainable and innovative internet infrastructure.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mt-20 mb-16">
           {/* Card 1 */}
           <div className="relative rounded-lg overflow-hidden group">
             <div className="absolute inset-0 z-0">
@@ -158,9 +151,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-[1300]">
         {/* Internet Access Card */}
-        <div className="relative overflow-hidden rounded-xl bg-gray-900 text-white">
+        <div className="relative overflow-hidden col-span-2 rounded-xl bg-gray-900 text-white">
           <div className="absolute inset-0 z-0">
             <Image
               src="/image 17.png?height=300&width=600"
@@ -212,8 +205,8 @@ export default function Home() {
         </div>
 
         {/* Network Solutions Card */}
-        <div className="relative overflow-hidden rounded-xl bg-gray-900 text-white">
-          <div className="relative h-[300px] w-full">
+        <div className="relative col-span-2 overflow-hidden rounded-xl bg-gray-900 text-white">
+          <div className="absolute h-[300px] w-full">
             <Image
               src="/image 20.png?height=300&width=600"
               alt="Server room with red and blue lighting"
@@ -233,8 +226,8 @@ export default function Home() {
         
 
         {/* Network Solutions Card */}
-        <div className="relative overflow-hidden rounded-xl bg-gray-900 text-white">
-          <div className="relative h-[300px] w-full">
+        <div className="relative overflow-hidden col-span-2 rounded-xl bg-gray-900 text-white">
+          <div className="absolute h-[300px] w-full">
             <Image
               src="/image 21.png?height=300&width=600"
               alt="Server room with red and blue lighting"
@@ -286,8 +279,8 @@ export default function Home() {
         </div>
 
         {/* Network Solutions Card */}
-        <div className="relative overflow-hidden rounded-xl bg-gray-900 text-white">
-          <div className="relative h-[300px] w-full">
+        <div className="relative overflow-hidden col-span-2 rounded-xl bg-gray-900 text-white">
+          <div className="absolute h-[300px] w-full">
             <Image
               src="/image 26.png?height=300&width=600"
               alt="Server room with red and blue lighting"
@@ -304,44 +297,47 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full bg-white py-12 px-4 md:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
-          <Image
-            src="/image 27.png?height=500&width=500"
-            alt="IT professional working on a laptop near server equipment"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-
-        <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Deep knowledge in the field</h2>
-
-          <p className="text-gray-700">
-            Our deep roots in the technology industry have established Ampersand Hi-Tech as a trusted provider of
-            cutting-edge solutions. With years of experience serving diverse communities, we have refined our expertise
-            in internet access, network distribution, and network security. Our team possesses an unparalleled
-            understanding of the challenges and opportunities within the digital landscape, enabling us to deliver
-            innovative and reliable services that not only meet but exceed the expectations of our clients.
-          </p>
-
-          <div className="pt-4">
-            <h3 className="text-lg font-medium mb-4">Subscribe to our newsletter</h3>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Input type="text" placeholder="First name" className="bg-gray-900 border-gray-800" />
-              <Input type="email" placeholder="Email" className="bg-gray-800 border-gray-300" />
-              <Button className="bg-gray-900 hover:bg-gray-800 text-white">Subscribe</Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+        
   
       </div>
-      <div className="max-w-3xl p-6 ">
+
+     <section className="w-full bg-[#F4F4F4] -pt-10 mt-20">
+           <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+             <div className="relative w-full h-[600px] rounded mb-20">
+               <Image
+                 src="/image 27.png"
+                 width={494}
+                 height={624}
+                 alt="IT professional working on a laptop next to server rack"
+                 className="object-cover object-center"
+               />
+             </div>
+     
+             <div className="px-6 py-10 lg:py-16 space-y-8">
+               <h2 className="text-4xl font-bold tracking-tight text-gray-900">Deep knowledge in the field</h2>
+     
+               <p className="text-gray-700 leading-relaxed">
+                 Our deep roots in the technology industry have established Ampersand Hi-Tech as a trusted provider of
+                 cutting-edge solutions. With years of experience serving diverse communities, we have refined our expertise
+                 in internet access, network distribution, and network security. Our team possesses an unparalleled
+                 understanding of the challenges and opportunities within the digital landscape, enabling us to deliver
+                 innovative and reliable services that not only meet but exceed the expectations of our clients.
+               </p>
+     
+               <div className="pt-4">
+                 <h3 className="text-xl font-medium text-gray-900 mb-4">Subscribe to our newsletter</h3>
+     
+                 <div className="flex flex-col sm:flex-row gap-3">
+                   <Input type="text" placeholder="First name" className="bg-black border-gray-300" />
+                   <Input type="email" placeholder="Email" className="bg-black border-gray-300" />
+                   <Button className="bg-white hover:bg-gray-800 text-black">Subscribe</Button>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </section>
+
+      <div className="max-w-3xl p-6 mt-20">
       <h2 className="text-3xl font-medium text-gray-800 mb-4">Get in touch with us</h2>
 
       <p className="text-gray-700 mb-6">
@@ -352,7 +348,7 @@ export default function Home() {
 
       <Link
         href="/contact"
-        className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
+        className="inline-flex items-center font-medium hover:text-blue-800 transition-colors"
       >
         Contact us <ArrowRight className="ml-1 h-4 w-4" />
       </Link>
@@ -450,6 +446,7 @@ export default function Home() {
         </div>
       </div>
     </footer>
-  </>
-  );
+
+      </>
+    )
 }

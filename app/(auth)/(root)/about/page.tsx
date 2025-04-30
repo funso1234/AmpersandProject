@@ -8,7 +8,7 @@ import { Linkedin, Instagram, Facebook } from "lucide-react"
 export default function AboutPage() {
   return (
     <>
-      <main className="min-h-screen relative md:px-20 bg-white text-gray-800">
+      <main className="min-h-screen relative bg-white text-gray-800">
         {/* Background image and overlay */}
         <div className="absolute inset-0 z-0 h-[600px]">
           <Image
@@ -22,7 +22,7 @@ export default function AboutPage() {
         </div>
 
         {/* Navbar */}
-        <div className="relative z-10 container mx-auto flex items-center justify-between px-4 py-6">
+        <div className="relative z-10 container mx-auto px-20 flex items-center justify-between ">
           <div className="flex items-center gap-3">
             <Image src="/Group.png" alt="logo" width={32} height={32} />
             <div className="flex flex-col leading-tight">
@@ -46,7 +46,7 @@ export default function AboutPage() {
         </div>
 
         {/* Hero Text */}
-        <div className="relative z-10 flex flex-col justify-center h-[300px] px-6 md:px-16 lg:px-24 text-white mt-40">
+        <div className="relative container mx-auto px-20 z-10 flex flex-col justify-center h-[300px]  text-white mt-40">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">About us</h1>
           <p className="text-lg md:text-xl max-w-3xl leading-relaxed">
             Building an excellent, innovative, and sustainable connected future—
@@ -55,7 +55,7 @@ export default function AboutPage() {
         </div>
 
         {/* Empowering Communities */}
-        <section className="relative z-10 bg-white px-6 md:px-16 lg:px-24 py-30 mt-20">
+        <section className="relative z-10 bg-white container mx-auto lg:px-24 py-30 mt-20">
           <div className="max-w-4xl mb-12">
             <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-4">
               Empowering
@@ -82,16 +82,16 @@ export default function AboutPage() {
         </section>
 
         {/* Mission and Vision */}
-        <section className="w-full md:px-16 py-12 bg-gray-50">
-          <div className="container mx-auto gap-6 px-4">
-            <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+        <section className="w-full md:px-16 py-12 bg-[#F4F4F4]">
+          <div className="gap-6 px-4">
+            <div className="relative container mx-auto  grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x-6 divide-white">
               <div className="p-8 md:p-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Mission</h2>
                 <p className="text-lg text-gray-700">
                   To <span className="font-semibold">connect, secure, and elevate</span> communities...
                 </p>
               </div>
-              <div className="p-8 md:p-10">
+              <div className="p-8 md:pl-30 md:p-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Vision</h2>
                 <p className="text-lg text-gray-700">
                   A world where <span className="font-semibold">no one is left offline</span>...
@@ -102,19 +102,19 @@ export default function AboutPage() {
         </section>
 
         {/* Philosophy Image */}
-        <section className="relative md:px-16 mt-20 w-full overflow-hidden">
+        <section className="container mx-auto mt-20 w-full overflow-hidden">
           <Image
             src="/Frame 20.png"
             width={1312}
             height={500}
             alt="Looking up at tall trees"
             priority
-            className="object-cover"
+            className="object-cover mx-auto"
           />
         </section>
 
         {/* Company Values */}
-        <section className="w-full md:px-16 mt-20 bg-gray-50">
+        <section className="w-full md:px-16 mt-20 bg-[#F4F4F4]">
           <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
@@ -140,7 +140,8 @@ export default function AboutPage() {
         <section className="min-h-[30vh] md:px-20 mt-16 py-16">
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-800">
-              We cultivate a culture that challenges norms, embraces emerging tech, and turns obstacles into breakthroughs...
+              We cultivate a culture that challenges norms, embraces emerging tech, and turns obstacles into breakthroughs. 
+              As the digital landscape evolves, our commitment to Innovation ensures we don't just adapt—we lead the charge.
             </p>
           </div>
         </section>
