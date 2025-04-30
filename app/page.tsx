@@ -325,11 +325,11 @@ export default function HomePage() {
                </p>
      
                <div className="pt-4">
-                 <h3 className="text-xl font-medium text-gray-900 mb-4">Subscribe to our newsletter</h3>
+                 <h3 className="text-xl font-medium text-gray-700 mb-4">Subscribe to our newsletter</h3>
      
                  <div className="flex flex-col sm:flex-row gap-3">
-                   <Input type="text" placeholder="First name" className="bg-black border-gray-300" />
-                   <Input type="email" placeholder="Email" className="bg-black border-gray-300" />
+                   <Input type="text" placeholder="First name" className="bg-black" />
+                   <Input type="email" placeholder="Email" className="bg-black " />
                    <Button className="bg-white hover:bg-gray-800 text-black">Subscribe</Button>
                  </div>
                </div>

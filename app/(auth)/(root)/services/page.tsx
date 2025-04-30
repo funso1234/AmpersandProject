@@ -4,8 +4,28 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
 import { Linkedin, Instagram, Facebook } from "lucide-react"
+import RequestQuoteForm from "@/app/component/requestquoteform"
+import ContactForm from "@/app/component/contactusform"
 
+
+interface AccordionItemProps {
+  title: string
+  children: React.ReactNode
+  isOpen: boolean
+  toggleOpen: () => void
+}
 export default function ServicePage() {
 
     const services = [
@@ -140,10 +160,25 @@ export default function ServicePage() {
       </div>
 
       <div className="flex flex-wrap gap-4">
-        <Button variant="outline" className="bg-gray-100 hover:bg-gray-200">
+        <Dialog>
+      <DialogTrigger asChild>
+      <Button variant="outline" className="bg-gray-100 hover:bg-gray-200">
           Get a Custom Quote
         </Button>
-        <Button variant="outline">Contact Our Team</Button>
+      </DialogTrigger>
+      <DialogContent>
+     <RequestQuoteForm/>
+      </DialogContent>
+    </Dialog>
+        
+        <Dialog>
+      <DialogTrigger asChild>
+      <Button variant="outline">Contact Our Team</Button>
+      </DialogTrigger>
+      <DialogContent>
+     <ContactForm/>
+      </DialogContent>
+    </Dialog>
       </div>
     </section>
 

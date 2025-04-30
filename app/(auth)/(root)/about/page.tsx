@@ -88,14 +88,17 @@ export default function AboutPage() {
               <div className="p-8 md:p-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Mission</h2>
                 <p className="text-lg text-gray-700">
-                  To <span className="font-semibold">connect, secure, and elevate</span> communities...
+                To <span className="font-medium">connect, secure, and elevate</span> communities through{" "}
+              <span className="font-medium">scalable, sustainable, and future-ready</span> technology infrastructure.
                 </p>
               </div>
               <div className="p-8 md:pl-30 md:p-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Vision</h2>
-                <p className="text-lg text-gray-700">
-                  A world where <span className="font-semibold">no one is left offline</span>...
-                </p>
+                <p className="text-gray-700">
+              A world where <span className="font-medium">no one is left offline</span>—where every business, home, and
+              organization has access to <span className="font-medium">high-speed, resilient, and innovative</span>{" "}
+              solutions that unlock growth.
+            </p>
               </div>
             </div>
           </div>
