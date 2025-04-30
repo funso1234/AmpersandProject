@@ -15,39 +15,92 @@ import {
 } from "@/components/ui/dialog"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
-import { Linkedin, Instagram, Facebook } from "lucide-react"
+import { Linkedin, Instagram, Facebook, Dot } from "lucide-react"
 import RequestQuoteForm from "@/app/component/requestquoteform"
 import ContactForm from "@/app/component/contactusform"
 
 
-interface AccordionItemProps {
-  title: string
-  children: React.ReactNode
-  isOpen: boolean
-  toggleOpen: () => void
-}
+
 export default function ServicePage() {
 
     const services = [
-        {
-          title: "High-Speed Internet Access",
-          content:
-            "We provide reliable high-speed internet solutions for businesses and residential customers. Our services include fiber optic connections, broadband, and dedicated lines with guaranteed uptime and 24/7 technical support.",
-        },
+      {
+        title: "High-Speed Internet Access",
+    content: (
+      <>
+        <div className="flex items-start mb-2">
+          <Dot className="inline mr-2 mt-1" />
+          <span><strong>Fiber-optic & wireless networks</strong> with symmetrical speeds.</span>
+        </div>
+        <div className="flex items-start">
+          <Dot className="inline mr-2 mt-1" />
+          <span>Tailored plans for <strong>homes, businesses, and large-scale communities</strong>.</span>
+        </div>
+        <div className="flex items-start">
+          <Dot className="inline mr-2 mt-1" />
+          <span>
+              <strong>SPRY:</strong> Affordable, unlimited bandwidth for seamless connectivity.
+            </span>
+        </div>
+      </>
+    ),
+      },
+
+      
         {
           title: "Network Distribution & Infrastructure",
-          content:
-            "Our team designs, implements, and maintains robust network infrastructure solutions. We specialize in structured cabling, wireless networks, server room design, and network hardware deployment to ensure optimal performance and scalability.",
+    content: (
+      <>
+        <div className="flex items-start mb-2">
+          <Dot className="inline mr-2 mt-1" />
+          <span>
+              Custom-built solutions for <strong>gated communities, campuses, and enterprises</strong>.
+            </span>
+        </div>
+        <div className="flex items-start">
+          <Dot className="inline mr-2 mt-1" />
+          <span>
+          Sectors served: <strong>Healthcare, Hospitality, Retail, Industrial, Public Services</strong>.
+          </span>
+        </div>
+      </>
+    ),
         },
         {
           title: "Network Security & Cybersecurity",
-          content:
-            "Protect your digital assets with our comprehensive security solutions. We offer firewall implementation, intrusion detection systems, vulnerability assessments, security audits, and employee security awareness training to safeguard your network.",
+    content: (
+      <>
+        <div className="flex items-start mb-2">
+          <Dot className="inline mr-2 mt-1" />
+          <span>
+              24/7 threat monitoring and <strong>enterprise-grade protection</strong>.
+            </span>
+        </div>
+        <div className="flex items-start">
+          <Dot className="inline mr-2 mt-1" />
+          <span>Managed firewalls, encryption, and compliance support.</span>
+        </div>
+      </>
+    ),
         },
         {
           title: "Technology Consultancy",
-          content:
-            "Our expert consultants provide strategic guidance on technology investments and implementations. We help businesses align their IT infrastructure with business goals, optimize existing systems, and plan for future technology needs.",
+    content: (
+      <>
+        <div className="flex items-start mb-2">
+          <Dot className="inline mr-2 mt-1" />
+          <span>
+              <strong>ICT strategy, network optimization, and security training</strong>.
+            </span>
+        </div>
+        <div className="flex items-start">
+          <Dot className="inline mr-2 mt-1" />
+          <span>
+              Future-proofing businesses for <strong>IoT, cloud integration, and 5G readiness</strong>.
+            </span>
+        </div>
+      </>
+    ),
         },
       ]
   return (
@@ -108,7 +161,7 @@ export default function ServicePage() {
           </p>
         </div>
 
-        <div className="w-full max-w-4xl mx-auto p-4 mt-20 md:px-1">
+        <div className="container max-w-4xl mx-auto p-4 mt-20 md:px-1">
       <Accordion type="single" collapsible className="w-full">
         {services.map((service, index) => (
           <AccordionItem

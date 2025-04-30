@@ -122,17 +122,23 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <p className="text-lg">
-                  From day one, <span className="font-semibold">Ampersand Hi~Tech</span> has been built on...
+                From day one, <span className="font-semibold">Ampersand Hi~Tech</span> has been built on a foundation of{" "}
+              <span className="font-semibold">bold thinking and technological disruption</span>. Innovation isn't just a
+              philosophy for us— it's the heartbeat of our mission to{" "}
+              <span className="font-semibold">connect communities and redefine digital possibilities</span>.
                 </p>
               </div>
               <div className="space-y-6">
                 <p className="text-lg">
-                  Our founders envisioned a world where reliable, secure, and scalable technology could transform...
+                Our founders envisioned a world where reliable, secure, and scalable technology could transform how people
+                live, work, and grow. That vision drives us to:
                 </p>
                 <ul className="space-y-4 list-disc pl-5">
-                  <li className="text-lg"><span className="font-semibold">Pioneer</span> next-gen internet solutions</li>
-                  <li className="text-lg"><span className="font-semibold">Engineer</span> resilient networks</li>
-                  <li className="text-lg"><span className="font-semibold">Embed</span> security and sustainability</li>
+                  <li className="text-lg"><span className="font-semibold">Pioneer next-gen internet solutions</span> that outpace demand.</li>
+                  <li className="text-lg"><span className="font-semibold">Engineer resilient networks</span> for closed communities and
+                  enterprises.</li>
+                  <li className="text-lg"> <span className="font-semibold">Embed security and sustainability</span> into every layer of our
+                  infrastructure.</li>
                 </ul>
               </div>
             </div>
@@ -141,8 +147,8 @@ export default function AboutPage() {
 
         {/* Final Statement */}
         <section className="min-h-[30vh] md:px-20 mt-16 py-16">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-800">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-lg md:text-xl text-gray-700 my-8 leading-relaxed">
               We cultivate a culture that challenges norms, embraces emerging tech, and turns obstacles into breakthroughs. 
               As the digital landscape evolves, our commitment to Innovation ensures we don't just adapt—we lead the charge.
             </p>
